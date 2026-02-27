@@ -1,14 +1,22 @@
-
 import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import DisplayPage from './pages/DisplayPage'
+import AddPage from './pages/AddPage'
+import EditPage from './pages/EditPage'
+
 
 function App() {
 
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-      <h1 className="text-5xl font-bold text-green-400">
-        Tailwind is Working 🚀
-      </h1>
-    </div>
+    <div className="min-h-screen bg-slate-100">
+    <main className="max-w-6xl mx-auto p-6">
+      <Routes>
+        <Route path="/" element={<DisplayPage />} />
+        <Route path="/add" element={<AddPage />} />
+        <Route path="/edit/:id" element={<EditPage />} />
+      </Routes>
+    </main>
+  </div>
   )
 }
 
