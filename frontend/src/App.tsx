@@ -2,7 +2,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import DisplayPage from './pages/DisplayPage'
 import AddPage from './pages/AddPage'
-import EditPage from './pages/EditPage'
+import EditPage from './pages/DetailsPage'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DisplayPage />} />
         <Route path="/add" element={<AddPage />} />
-        <Route path="/edit/:id" element={<EditPage />} />
+        <Route path="/display/:id" element={<EditPage />} />
       </Routes>
     </main>
   </div>
