@@ -17,7 +17,7 @@ function DetailsPage() {
   const [editDescription, setEditDescription] = useState("");
   const [saving, setSaving] = useState(false);
 
-  // Fetch book on load
+
   useEffect(() => {
     if (!id) return;
 
@@ -37,7 +37,7 @@ function DetailsPage() {
     fetchBook();
   }, [id]);
 
-  // Open modal and populate fields
+  
   const openEditModal = () => {
     if (!book) return;
     setEditTitle(book.title);
@@ -46,14 +46,14 @@ function DetailsPage() {
     setIsModalOpen(true);
   };
 
-  // Handle save changes
+
   const handleSave = async () => {
     if (!book) return;
     setSaving(true);
     try {
       const updatedBook = { ...book, title: editTitle, author: editAuthor, description: editDescription };
       await updateBook(book.id, updatedBook);
-      setBook(updatedBook); // update UI
+      setBook(updatedBook);
       setIsModalOpen(false);
     } catch (err) {
       console.error("Failed to update book", err);

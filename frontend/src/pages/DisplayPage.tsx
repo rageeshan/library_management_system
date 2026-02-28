@@ -9,7 +9,7 @@ const DisplayPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Fetch books from backend
+
   useEffect(() => {
     let isMounted = true;
 

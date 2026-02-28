@@ -15,7 +15,7 @@ function AddPage() {
     try {
       await createBook({ title, author, description });
       alert("Book added successfully!");
-      navigate("/"); // back to DisplayPage
+      navigate("/");
     } catch (error) {
       console.error("Failed to add book", error);
       alert("Failed to add book. Check backend connection.");
